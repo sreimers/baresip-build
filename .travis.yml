@@ -11,5 +11,6 @@ deploy:
   file: 
         - baresip-osx
         - baresip-linux
+  skip_cleanup: true
   on:
-    repo: sreimers/baresip-build
+    tags: true
