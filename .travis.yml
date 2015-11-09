@@ -2,7 +2,7 @@ language: c
 os:
 - osx
 - linux
-before_install: sudo bash -ex before_install.sh
+before_install: sudo before_install.sh
 script: "./build.sh"
 deploy:
   provider: releases

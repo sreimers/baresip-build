@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 if [ "$TRAVIS_OS_NAME" == "linux" ]; then
     apt-get update -qq
