@@ -2,12 +2,7 @@ language: c
 os:
 - osx
 - linux
-before_install:
-        - sudo apt-get update -qq
-        - sudo apt-get install -y libssl-dev
-        - sudo rm -f /usr/lib/x86_64-linux-gnu/libcrypto.so
-        - sudo rm -f /usr/lib/x86_64-linux-gnu/libssl.so
-
+before_install: "./before_install.sh"
 script: "./build.sh"
 deploy:
   provider: releases
