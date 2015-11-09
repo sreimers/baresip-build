@@ -25,7 +25,7 @@ mkdir opus; cp opus-$opus/.libs/libopus.a opus/
 wget -N "http://www.creytiv.com/pub/baresip-0.4.15.tar.gz"
 tar -xzf baresip-${baresip}.tar.gz
 cd baresip-$baresip;
-make LIBRE_SO=../re LIBREM_PATH=../rem STATIC=1 MODULES="opus stdio ice menu g711 turn stun uuid auloop contact" EXTRA_LFLAGS="-I ../opus"
+make LIBRE_SO=../re LIBREM_PATH=../rem STATIC=1 MODULES="opus stdio ice menu g711 turn stun uuid auloop contact" EXTRA_CFLAGS="-I ../opus-$opus/include" EXTRA_LFLAGS="-L ../opus"
 cd ..
 
 ldd baresip-$baresip/baresip
