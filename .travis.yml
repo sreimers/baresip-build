@@ -1,8 +1,15 @@
 language: c
 os:
-   - osx
-   - linux
-
+- osx
+- linux
 sudo: false
-
-script: ./build.sh
+script: "./build.sh"
+deploy:
+  provider: releases
+  api_key:
+    secure: q4sc9GgVHYuxBQ/2nvX9R9U/DBkgGG2Za9rXLkoxCo5c+mhFPBtP+hTOuK7LsPDHp54sPTeyqnLVfh34ESTH/T428pbnX6W4secF3F54h/SpNhmcEeFQpBV9qBM9bDCg0xb5u/94IGloX+T/qQO77lzMPyyK9a99lsnjzMRBW0I0x5O4H9lvSp6cn89oeZUKZ0U5t+oZ1FhnVg5OLJ/BGKNnWgFfgPQ+Pgm9kh8nv+5Ht6x/yq8yaKOAAEc0AQChxQz4+XbENiwOITWMsqfpssrFrZfxyaXQ8foDZzTC3MKv+ksWQ4xpjsq2Q1o8EJ+gMkymHlrEIf6WnJr3WG9TMnimqXRbhcQAjBHAk/eHfoIHCYcgYs0UXvz0bYJK+rAsE7Q/DfMxPgKbWQ+s6KcZd96giEtStZZkaceG5aPN5uwgA/kLHX0ayRAE/YdaIUoe7Uk/iIVl/KLc/oRroptXaKkor5jZoOwz/M26XObMd+QWyJP3B9fDek7kAwVmMd3aqYOnmAyZg8qlAoweN3n55bG9mvFCCxEHfReGshkl5x3NFs82MxE6ZPf4e4GlsnJ8rYRf8j1qEerNlU+7PbNGEFrAoVammzIGNKk2liapDAWnncxiKqJR8i0WyPcr4/Lrs7e51KiyRLEsUCgk5RD4hcZEJSz2mHttZ6qRxeQA6pY=
+  file: 
+        - baresip-osx
+        - baresip-linux
+  on:
+    repo: sreimers/baresip-build

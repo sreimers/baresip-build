@@ -40,8 +40,10 @@ make LIBRE_SO=../re LIBREM_PATH=../rem STATIC=1 \
 cd ..
 
 if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-ldd baresip-$baresip/baresip
+    ldd baresip-$baresip/baresip
+    cp baresip-$baresip/baresip baresip-linux
 else
-otool -L baresip-$baresip/baresip
+    otool -L baresip-$baresip/baresip
+    cp baresip-$baresip/baresip baresip-osx
 fi
 baresip-$baresip/baresip -t
