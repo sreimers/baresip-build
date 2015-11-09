@@ -2,7 +2,7 @@ language: c
 os:
 - osx
 - linux
-before_install: sudo ./before_install.sh
+before_install: sudo ./before_install.sh $TRAVIS_OS_NAME
 script: "./build.sh"
 deploy:
   provider: releases
