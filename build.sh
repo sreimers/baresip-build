@@ -11,9 +11,6 @@ else
     my_extra_lflags="-framework SystemConfiguration -framework CoreFoundation"
 fi
 
--framework SystemConfiguration -framework CoreFoundation 
-
-
 rm -Rf baresip-$baresip re rem re-$re rem-$rem opus-$opus
 
 wget -N "http://www.creytiv.com/pub/re-0.4.14.tar.gz"
