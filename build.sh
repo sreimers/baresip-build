@@ -3,7 +3,7 @@
 rem="0.4.6"
 re="0.4.14"
 opus="1.1"
-baresip="0.4.15"
+baresip="master"
 
 if [ "$TRAVIS_OS_NAME" == "linux" ]; then
     my_extra_lflags=""
@@ -30,8 +30,9 @@ mkdir opus; cp opus-$opus/.libs/libopus.a opus/
 mkdir -p my_include/opus
 cp opus-$opus/include/*.h my_include/opus/ 
 
-wget -N "http://www.creytiv.com/pub/baresip-0.4.15.tar.gz"
-tar -xzf baresip-${baresip}.tar.gz
+#wget -N "http://www.creytiv.com/pub/baresip-0.4.15.tar.gz"
+#tar -xzf baresip-${baresip}.tar.gz
+git clone https://github.com/alfredh/baresip.git baresip-master
 cd baresip-$baresip;
 
 make LIBRE_SO=../re LIBREM_PATH=../rem STATIC=1 \
