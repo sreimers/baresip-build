@@ -18,9 +18,6 @@ env:
         - BUILD_OS="osx"
 
 matrix:
-        include:
-                - os: osx
-                  sudo: true
         exclude:
                 - os: osx
                   env: BUILD_OS="linux"
