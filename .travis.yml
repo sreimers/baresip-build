@@ -2,7 +2,8 @@ language: c
 os:
 - osx
 - linux
-sudo: false
+sudo: required
+dist: trusty
 script: "./build.sh"
 deploy:
   provider: releases
